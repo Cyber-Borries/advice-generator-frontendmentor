@@ -21,19 +21,26 @@ export default function Main() {
     <div className="main-container">
       <div className="advice-container">
         <div className="advice-header">
-          {!advice ? "loading..." : "Advice #" + advice?.id}
+          <h1 className="h1-advice">
+            {!advice ? "loading..." : "Advice #" + advice?.id}
+          </h1>
         </div>
         <div className="advice-body">
           "{!advice ? "loading advice" : advice?.advice}"
         </div>
 
         <div className="advice-footer">
-          <img className="svgSeperator" src={svgSeperator} />
+          <img className="svgSeperator" src={svgSeperator} alt="seperator" />
         </div>
 
         <div className="dice-div">
           {" "}
-          <img className="dice" src={dice} onClick={fetchAdvice} />
+          <img
+            className="dice"
+            src={dice}
+            onClick={fetchAdvice}
+            alt="dice to generate new advice"
+          />
         </div>
       </div>
     </div>
